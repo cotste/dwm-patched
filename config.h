@@ -17,7 +17,7 @@ static const char colors[NUMCOLORS][ColLast][8] = {
 };
 
 /* appearance */
-static const char font[]            = "xft:Inconsolata:style=Regular:size=9";
+static const char font[]            = "xft:FuraCode Nerd Font:style=Regular:size=10";
 /*static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";*/
 /*static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
@@ -39,7 +39,9 @@ static const char *tags[] = { "term", "web", "dev", "virt", "foo"};
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",		NULL,		NULL,		0,			True,			-1 },
-	{ "Firefox",	NULL,		NULL,       1 << 1,		False,			-1 },
+	{ "Vivaldi",	NULL,		NULL,		1 << 1,		False,			-1 },
+	{ "Vivaldi",	NULL,		NULL,		1 << 1,		False,			-1 },
+	{ "Chromium",	NULL,		NULL,       1 << 1,		False,			-1 },
 	{ "Dwb",		NULL,		NULL,		1 << 1,		False,			-1 },
 	{ "Vmware",		NULL,		NULL,		1 << 3,		True,			-1 },
 	{ "Thunar",		"thunar"	"File Operation Progress",	0,	True,	-1 },
@@ -76,7 +78,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", colors[0][ColBG], "-nf", colors[0][ColFG],"-sb", colors[1][ColBG], "-sf", colors[1][ColFG], NULL };
-static const char *termcmd[]  = { "urxvtc", NULL };
+static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
