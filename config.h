@@ -17,7 +17,7 @@ static const char colors[NUMCOLORS][ColLast][8] = {
 };
 
 /* appearance */
-static const char font[]            = "xft:FuraCode Nerd Font:style=Regular:size=10";
+static const char font[]            = "xft:Inconsolata:style=Regular:size=12";
 /*static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";*/
 /*static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
@@ -26,7 +26,7 @@ static const char selbordercolor[]  = "#005577";
 static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";*/
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gap pixel between windows */
+static const unsigned int gappx     = 15;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const Bool showsystray       = True;     /* False means no systray */
@@ -34,19 +34,20 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "term", "web", "dev", "virt", "foo"};
+static const char *tags[] = { "term", "web", "mail", "file", "im", "foo"};
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",		NULL,		NULL,		0,			True,			-1 },
-	{ "Vivaldi",	NULL,		NULL,		1 << 1,		False,			-1 },
-	{ "Vivaldi",	NULL,		NULL,		1 << 1,		False,			-1 },
-	{ "Chromium",	NULL,		NULL,       1 << 1,		False,			-1 },
-	{ "Dwb",		NULL,		NULL,		1 << 1,		False,			-1 },
-	{ "Vmware",		NULL,		NULL,		1 << 3,		True,			-1 },
-	{ "Thunar",		"thunar"	"File Operation Progress",	0,	True,	-1 },
-	{ "mplayer2",	NULL,		"mplayer2", 1 << 4,		True,			-1 },
-	{ "Gvim",		NULL,		NULL,		1 << 2,		False,			-1 },
+	{ "Gimp",  		NULL,		    NULL,		    0,			True,			-1 },
+	{ "Vivaldi",	NULL,	    	NULL,		    1 << 1,		False,			-1 },
+	{ "Vivaldi",	NULL,		    NULL,		    1 << 1,		False,			-1 },
+	{ "Chromium",	NULL,		    NULL,       1 << 1,		False,			-1 },
+	{ "Dwb",	  	NULL,		    NULL,		    1 << 1,		False,			-1 },
+	{ "Vmware",		NULL,		    NULL,		    1 << 3,		True,			-1 },
+	{ "Thunar",		"thunar"	  "File Operation Progress",	0,	True,	-1 },
+	{ "mplayer2",	NULL,		    "mplayer2", 1 << 4,		True,			-1 },
+	{ "Gvim",	  	NULL,		    NULL,		    1 << 2,		False,			-1 },
+  { "Firefox",  NULL,       NULL,       1 << 1,   False,      -1},
 };
 
 /* layout(s) */
